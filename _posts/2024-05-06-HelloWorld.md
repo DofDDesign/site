@@ -13,5 +13,6 @@ Watch this space for cool things and neat stuff! Or don't, whatever.
 <br>Want to know what else I'm working on? Here's a list of my other public repositories:
 {% for repository in site.github.public_repositories %}
 <br>[{{ repository.name }}]({{ repository.html_url }})
+<br>{{ repository.project_tagline }}
 {% endfor %}
 {% endif %}
