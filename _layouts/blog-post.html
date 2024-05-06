@@ -9,7 +9,7 @@
 <div>
 <a href="{{ site.baseurl }}/">Home</a>
 <h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string}} - {{ page.author }}</p>
+<p><a href="{{page.authorURL}}" target="_blank">{{ page.author }}</a> {{ page.date | date_to_string}}</p>
 {{ content }}
 </div>
 <div>

@@ -1,6 +1,7 @@
 ---
 layout: blog-post
 author: DeeJay
+authorURL: https://github.com/dofddesign
 title: Another One
 excerpt: I do be posting tho lmaoo
 date: 2024-05-06 00:00:00 +0000
