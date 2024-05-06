@@ -54,21 +54,25 @@
 <div class="profile">
 <br>
 <div class="post">
-<h1>{{ page.title }}</h1>
-<br><i>{{ page.excerpt }}</i>
-<br>
-<br>Author: <a href="{{page.authorURL}}" target="_blank">{{ page.author }}</a>
-<br>Date: {{ page.date | date_to_string}}
-{{ content }}
+    <h1>{{ page.title }}</h1>
+    <br><a href="{{page.authorURL}}" target="_blank">{{ page.author }}</a>
+    <br>{{ page.date | date_to_string}}
+    <br>
+    <br><strong><i>{{ page.excerpt }}</i></strong>
+    <br>
+    {{ content }}
 </div>
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
 <h2>Latest Posts</h2>
-{% assign loop_limit = 1 %}
+{% assign loop_limit = 4 %}
 {% for i in (0..loop_limit) %}
+{% if site.posts[i] %}
 <div class="post" style="width:50%;">
-<a href="{{ site.posts[i].url | relative_url }}">{{ site.posts[i].title }}</a>
-<br>{{ site.posts[i].excerpt }}
+    <a href="{{ site.posts[i].url | relative_url }}"><strong>{{ site.posts[i].title }}</strong></a>
+    <br>{{ site.posts[i].date | date_to_string}}
+    <br><i>{{ site.posts[i].excerpt }}</i>
 </div>
+{% endif %}
 {% endfor %}
 </div>
 </div>
