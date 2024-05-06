@@ -54,14 +54,12 @@
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
 {{ content }}
 <h1>Latest Posts</h1>
-
 {% for post in site.posts %}
 <div class="post" style="width:50%;">
 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 <br>{{ post.excerpt }}
 </div>
 {% endfor %}
-
 </div>
 </div><!-- colsm10 -->
 <div class="footer" style="background-image: url('banner.png');background-repeat: no-repeat;background-size: 100%;background-position: center center;">
