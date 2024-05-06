@@ -4,7 +4,7 @@ author: DeeJay
 authorURL: https://github.com/dofddesign
 title: Hello, World!
 excerpt: More to come! You better watch out!
-date: 2024-05-05 00:00:00 +0000
+date: 2024-05-05 00:00:00 Etc/UTC
 pinned: true
 ---
 <div>
