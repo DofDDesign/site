@@ -9,3 +9,7 @@ pinned: true
 ---
 Watch this space for cool things and neat stuff! Or don't, whatever.
 <br>This site is hosted on GitHub, and powered by <a href="https://jekyllrb.com/" target="_blank"><u>Jekyll</u></a>! Check out the repository <a href="https://github.com/dofddesign/site" target="_blank"><u>here</u></a>.
+
+{% for repository in site.github.public_repositories %}
+  * [{{ repository.name }}]({{ repository.html_url }})
+{% endfor %}
