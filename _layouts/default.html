@@ -55,14 +55,15 @@
     {{ content }}
 
     <h2>Pinned Post</h2>
-    {% assign total_posts = site.posts | size | minus: 1 %}
-    {% if site.posts[total_posts] %}
+    {% for post in site.posts %}
+    {% if post.pinned %}
     <div class="post" style="width:50%;">
-        <a href="{{ site.posts[total_posts].url | relative_url }}"><strong>{{ site.posts[total_posts].title }}</strong></a>
-        <br>{{ site.posts[total_posts].date | date_to_string}}
-        <br><i>{{ site.posts[total_posts].excerpt }}</i>
+        <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
+        <br>{{ post.date | date_to_string}}
+        <br><i>{{ post.excerpt }}</i>
     </div><br>
     {% endif %}
+    {% endfor %}
     <h2>Latest Posts</h2>
     {% assign loop_limit = 4 %}
     {% for i in (0..loop_limit) %}
