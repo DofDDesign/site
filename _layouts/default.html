@@ -61,7 +61,8 @@
         <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
         <br>{{ post.date | date_to_string}}
         <br><i>{{ post.excerpt }}</i>
-    </div><br>
+    </div>
+    {% break %}
     {% endif %}
     {% endfor %}
     <h2>Latest Posts</h2>
