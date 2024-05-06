@@ -22,7 +22,7 @@
 
 </head>
 <body style="background-color:#818181; background-image: url('bg.png');">
-<img src="media/media/bg.png" style="display:none;"></img>
+<img src="bg.png" style="display:none;"></img>
 <div class="container-fluid">
 <div class="row">
 <div class="col-2 col-sm-2" style="background-image: url('banner.png');background-repeat: no-repeat;background-size: cover;background-position: center center;">
@@ -47,8 +47,8 @@
 </div><!-- comsm2-->
 
 <div class="col-10 col-sm-10 ">
-<video loop muted id="myVideo" onended="run()" preload="true" disablePictureInPicture="true" oncontextmenu="return false;">
-<source src="http://10.0.0.206:8000/media/media/bg.mp4" type="video/mp4">
+<video loop muted id="myVideo" onended="run()" preload="true" disablePictureInPicture="true" oncontextmenu="return false;" style="z-index:-100">
+<source src="bg.mp4" type="video/mp4">
 </video>
 <div style="top:100px;width:100%;text-align:center;">
 <h1>Welcome</h1>
@@ -57,13 +57,13 @@
 <ul>
 
 <li>
-<a href="/site/2024/05/06/Welcome.html">Welcome!</a>
-Hiii silly heads!
+<a href="/site/2024/05/06/AnotherOne.html">Another One</a>
+I do be posting tho lmaoo
 </li>
 
 <li>
-<a href="/site/2024/05/06/AnotherOne.html">Another One</a>
-I do be posting tho lmaoo
+<a href="/site/2024/05/05/Welcome.html">Welcome!</a>
+Hiii silly heads!
 </li>
 
 </ul>
@@ -78,6 +78,10 @@ I do be posting tho lmaoo
 </div><!-- container-fluid -->
 <script>
 
+</script>
+<script>
+const vid = document.getElementById("myVideo");
+vid.play();
 </script>
 </body>
 </html>
