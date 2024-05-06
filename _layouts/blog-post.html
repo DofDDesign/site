@@ -63,10 +63,11 @@
 </div>
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
 <h2>Latest Posts</h2>
-{% for post in site.posts %}
+{% assign loop_limit = 1 %}
+{% for i in (0..loop_limit) %}
 <div class="post" style="width:50%;">
-<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-<br>{{ post.excerpt }}
+<a href="{{ site.posts[i].url | relative_url }}">{{ site.posts[i].title }}</a>
+<br>{{ site.posts[i].excerpt }}
 </div>
 {% endfor %}
 </div>
