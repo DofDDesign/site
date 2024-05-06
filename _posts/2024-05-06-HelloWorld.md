@@ -12,7 +12,7 @@ Watch this space for cool things and neat stuff! Or don't, whatever.
 {% if site.github.public_repositories %}
 <br>Want to know what else I'm working on? Here's a list of my other public repositories:
 {% for repository in site.github.public_repositories %}
-<br><strong>[{{ repository.name }}]({{ repository.html_url }})</strong>
+<br><strong><u>[{{ repository.name }}]({{ repository.html_url }})</u></strong>
 <br>Primary Language: {{ repository.language }}
 <br>Description: {{ repository.description }}
 {% endfor %}
