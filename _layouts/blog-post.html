@@ -14,14 +14,14 @@
 </div>
 <div>
 <h1>Latest Posts</h1>
-<ul>
+<div>
 {% for post in site.posts %}
-<li>
-<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-{{ post.excerpt }}
-</li>
+
+<br><a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+<br>{{ post.excerpt }}
+
 {% endfor %}
-</ul>
+</div>
 </div>
 </body>
 </html>

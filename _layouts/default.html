@@ -46,20 +46,22 @@
 </div><!-- comsm2-->
 
 <div class="col-10 col-sm-10 ">
+
 <video loop muted id="myVideo" onended="run()" preload="true" disablePictureInPicture="true" oncontextmenu="return false;" style="z-index:-100">
 <source src="bg.mp4" type="video/mp4">
 </video>
-<div style="top:100px;width:100%;text-align:center;">
+
+<div class="profile" style="top:100px;width:50%;text-align:center;color:#FFFFFF;">
 {{ content }}
 <h1>Latest Posts</h1>
-<ul>
+
 {% for post in site.posts %}
-<li>
+<div class="post">
 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-{{ post.excerpt }}
-</li>
+<br>{{ post.excerpt }}
+</div>
 {% endfor %}
-</ul>
+
 </div>
 </div><!-- colsm10 -->
 <div class="footer" style="background-image: url('banner.png');background-repeat: no-repeat;background-size: 100%;background-position: center center;">
