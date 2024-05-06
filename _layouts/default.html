@@ -54,9 +54,11 @@
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
     {{ content }}
 
-    <h2>Pinned Post</h2>
+    {% assign pinned_index = -1 %}
     {% for post in site.posts %}
+    {% assign pinned_index = pinned_index | plus: 1 %}
     {% if post.pinned %}
+    <h2>Pinned Post</h2>
     <div class="post" style="width:50%;">
         <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
         <br>{{ post.date | date_to_string}}
