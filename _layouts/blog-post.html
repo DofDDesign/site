@@ -59,21 +59,29 @@
     <br>{{ page.date | date_to_string}}
     <br>
     <br><strong><i>{{ page.excerpt }}</i></strong>
-    <br>
     {{ content }}
 </div>
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
-<h2>Latest Posts</h2>
-{% assign loop_limit = 4 %}
-{% for i in (0..loop_limit) %}
-{% if site.posts[i] %}
-<div class="post" style="width:50%;">
-    <a href="{{ site.posts[i].url | relative_url }}"><strong>{{ site.posts[i].title }}</strong></a>
-    <br>{{ site.posts[i].date | date_to_string}}
-    <br><i>{{ site.posts[i].excerpt }}</i>
-</div>
-{% endif %}
-{% endfor %}
+    <h2>Pinned Post</h2>
+    {% assign total_posts = site.posts | size | minus: 1 %}
+    {% if site.posts[total_posts] %}
+    <div class="post" style="width:50%;">
+        <a href="{{ site.posts[total_posts].url | relative_url }}"><strong>{{ site.posts[total_posts].title }}</strong></a>
+        <br>{{ site.posts[total_posts].date | date_to_string}}
+        <br><i>{{ site.posts[total_posts].excerpt }}</i>
+    </div><br>
+    {% endif %}
+    <h2>Latest Posts</h2>
+    {% assign loop_limit = 4 %}
+    {% for i in (0..loop_limit) %}
+    {% if site.posts[i] %}
+    <div class="post" style="width:50%;">
+        <a href="{{ site.posts[i].url | relative_url }}"><strong>{{ site.posts[i].title }}</strong></a>
+        <br>{{ site.posts[i].date | date_to_string}}
+        <br><i>{{ site.posts[i].excerpt }}</i>
+    </div>
+    {% endif %}
+    {% endfor %}
 </div>
 </div>
 
