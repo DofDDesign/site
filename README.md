@@ -1,1 +1,1 @@
-[![Site](https://dofddesign.github.io/site/)
+[Site](https://dofddesign.github.io/site/)
