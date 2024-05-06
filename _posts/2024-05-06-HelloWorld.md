@@ -16,7 +16,7 @@ Watch this space for cool things and neat stuff! Or don't, whatever.
 <div>
 <br>Want to know what else I'm working on? Here's a list of my other public repositories:
 {% for repository in site.github.public_repositories %}
-<br>[<u>{{ repository.name }}</u>]({{ repository.html_url }})
+<br>[{{ repository.name }}]({{ repository.html_url }})
 <br>Primary Language: {{ repository.language }}
 <br><i>{{ repository.description }}</i>
 {% endfor %}
