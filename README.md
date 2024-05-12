@@ -6,4 +6,5 @@ Learn how to create and host your own Jekyll site [here](https://jekyllrb.com/do
 
 ## Donate
 Feel free to sponsor this project using the link below! :D
+
 [Sponsor](https://github.com/sponsors/dofddesign)
