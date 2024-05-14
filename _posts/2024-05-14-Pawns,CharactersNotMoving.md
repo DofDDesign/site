@@ -20,4 +20,23 @@ mechanics within Unreal Engine 5. I wanted to add the free-roam nature to the en
 Therefore, I followed the existing UE documentation to create a simple “MoveTo” behaviour that
 enabled the enemies to move around the navigable area within the level. I added to this to
 enable the enemy to move towards the player, if they were within vision of the enemy itself.
-Upon testing my newly created near-sentient “AI”-power<img src='{{ site.baseurl }}/3499608151781539851715744961475638-0.gif'/><br><img src='{{ site.baseurl }}/3499608151781539851715744961475638-2.gif'/><br><img src='{{ site.baseurl }}/3499608151781539851715744961475638-1.png'/><br><img src='{{ site.baseurl }}/3499608151781539851715744961475638-3.png'/>
+Upon testing my newly created near-sentient “AI”-powered super Enemy, I found that it was
+skipping the movement portion of the behaviour tree, and instead turning around at intervals of
+four seconds. In addition to this, the enemy was correctly focusing and looking at the player
+when they caught a glimpse of them. It was partially working. Without further delay, I inspected
+every last element of the BehaviourTree setup and their related blueprints. I could not find any
+errors…
+<br><img src='{{ site.baseurl }}/3499608151781539851715744961475638-0.gif'/>
+<br><img src='{{ site.baseurl }}/3499608151781539851715744961475638-2.gif'/>
+In the end, I assumed I had lost the plot altogether and started again from scratch and followed
+all the documentation and tutorials to a tee.
+Spoiler alert, it wasn’t the logic! Five hours later, I discovered that it was the DefaultSceneRoot
+component. For a reason still unknown to me, having the enemies (as either Pawns/Characters)
+have a base of DefaultSceneRoot inhibited them completely from moving. Removing
+DefaultSceneRoot as the RootComponent and using the default Capsule Component should
+suffice. I assume this has to do with DefaultSceneRoot overriding the movement functionality of
+the Pawns/Character classes themselves. Although, I was possibly misled to believe that
+DefaultSceneRoots are a good way of organising Blueprint component hierarchies.
+Fixed with:
+<br><img src='{{ site.baseurl }}/3499608151781539851715744961475638-1.png'/>
+<br><img src='{{ site.baseurl }}/3499608151781539851715744961475638-3.png'/>
