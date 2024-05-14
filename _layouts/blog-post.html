@@ -64,7 +64,7 @@
     <br><strong><i>{{ page.excerpt }}</i></strong>
     {{ content }}
     <br/>Tags: {% assign tagsarray = page.keywords | split: "," %}{%- for tag in tagsarray -%}<a href="{{- tag | strip -}}">{{- tag | strip -}}</a>{% if forloop.last == false %}, {% endif %}{%- endfor -%}
-    <br>Category: <a href="{{ site.url }}{{ site.baseurl }}/categories/#{{ page.category }}">{{ page.category }}</a>
+    <br>Category: <a class="catUrl" href="{{ site.url }}{{ site.baseurl }}/categories/#{{ page.category }}">{{ page.category }}</a>
 </div>
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
     {% assign pinned_index = -1 %}
