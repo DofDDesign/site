@@ -14,9 +14,12 @@
 </noscript>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
-<title>DofDDesign | Home</title>
+<title>DofDDesign | test</title>
 <link rel="shortcut icon" type="image/png" href="/site/favicon.ico?">
 <meta charset="utf-8" />
+<meta name="author" content="DofDDesign"/>
+<meta name="description" content="testing"/>
+<meta name="keywords" content="Discord"/>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="/site/styles.css">
 
@@ -52,10 +55,18 @@
 <source src="/site/bg.mp4" type="video/mp4">
 </video>
 
+<div class="profile">
+<br>
+<div class="post">
+    <h1>test</h1>
+    <br/><a href="https://www.dofddesign.com" target="_blank">DofDDesign</a>
+    <br/>14 May 2024<br>
+    <br><strong><i>testing</i></strong>
+    <p>testinggg</p>
+
+    <br/>Tags: <a href="Discord">Discord</a><br>Category: <a class="catUrl" href="http://localhost:4000/site/categories/#Discord">Discord</a>
+</div>
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
-    <h1>Welcome</h1>
-
-
     
     
     
@@ -113,8 +124,9 @@
     
     
     
-
 </div>
+</div>
+
 </div><!-- colsm10 -->
 <div class="footer" style="background-image: url('/site/banner.png');background-repeat: no-repeat;background-size: 100%;background-position: center center;">
 <br><br><br>
@@ -124,7 +136,17 @@
 </div><!-- row -->
 </div><!-- container-fluid -->
 <script>
-
+document.addEventListener('DOMContentLoaded', async function () {
+    var referrer = document.referrer;
+    var hash = window.location.hash;
+    var category = hash.substring(1);
+    var catUrl = document.getElementsByClassName('catUrl');
+    for (let i = 0; i < catUrl.length; i++) {
+        var base = "http://localhost:4000/site/categories/#";
+        var sParameter = "Discord";
+        catUrl[i].href = base + encodeURIComponent(sParameter.trim());
+    };
+});
 </script>
 <script>
 const vid = document.getElementById("myVideo");
