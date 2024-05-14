@@ -107,12 +107,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     var referrer = document.referrer;
     var hash = window.location.hash;
     var category = hash.substring(1);
-    var catUrl = document.getElementsByClassName('catUrl');
-    for (let i = 0; i < catUrl.length; i++) {
-        var base = "{{ site.url }}{{ site.baseurl }}/categories/#";
-        var sParameter = "{{ page.category }}";
-        catUrl[i].href = base + encodeURIComponent(sParameter.trim());
-    };
+    console.log(category);
+    //var catUrl = document.getElementsByClassName('catUrl');
+    //for (let i = 0; i < catUrl.length; i++) {
+    //    var base = "{{ site.url }}{{ site.baseurl }}/categories/#";
+    //    var sParameter = "{{ page.category }}";
+    //    catUrl[i].href = base + encodeURIComponent(sParameter.trim());
+    //};
 });
 </script>
 <script>
