@@ -1,0 +1,19 @@
+---
+layout: categories
+permalink: /categories/
+title: Categories
+---
+<div style="margin-top:20px;"><a class="backlink" href="">BACK</a></div>
+<div style="margin-top:20px;">Categories{% for category in site.categories %}{% assign category_name = category | first %}<br><a rel="noopener" class="jumplink" href="#{{ category_name }}">{{ category_name }}</a>{% endfor %}</div>
+{%for category in site.categories %}
+{% assign category_name = category | first %}
+<div class="catDiv" id="{{ category_name }}" style="width:100%;"><h1>{{ category_name }}</h1>
+{% for post in site.categories[category_name] %}
+<div class="post" style="width:50%;">
+<a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
+<br>{{ post.date | date_to_string}}
+<br><i>{{ post.excerpt }}</i>
+</div>
+{% endfor %}
+</div>
+{% endfor %}
