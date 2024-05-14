@@ -68,9 +68,12 @@
 </div>
 
 
-    <br/>Tags: <a href="hello">hello</a><br>Category: <a href="http://localhost:4000/site/categories/#Words">Words</a>
+    <br/>Tags: <a href="hello">hello</a><br>Category: <a class="catUrl" href="http://localhost:4000/site/categories/#Words">Words</a>
 </div>
 <div class="profile" style="width:90%;text-align:center;color:#FFFFFF;">
+    
+    
+    
     
     
     
@@ -86,6 +89,14 @@
     </div>
     
     <h2>Latest Posts</h2>
+    
+    
+    
+    <div class="post" style="width:50%;">
+        <a href="/site/unreal%20engine%205/2024/05/14/Pawns,CharactersNotMoving.html"><strong>Pawns, Characters Not Moving</strong></a>
+        <br>14 May 2024
+        <br><i>DefaultSceneRoot override issue - Unreal Engine 5 - After many painstaking hours of debugging, we discovered that DefaultSceneRoot can be the ROOT of all evil… **badum tss**</i>
+    </div>
     
     
     
@@ -108,8 +119,6 @@
     
     
     
-    
-    
 </div>
 </div>
 
@@ -122,7 +131,16 @@
 </div><!-- row -->
 </div><!-- container-fluid -->
 <script>
-
+document.addEventListener('DOMContentLoaded', async function () {
+    var referrer = document.referrer;
+    var hash = window.location.hash;
+    var category = hash.substring(1);
+    var catUrl = document.getElementsByClassName('catUrl');
+    for (let i = 0; i < catUrl.length; i++) {
+        var sParameter = "http://localhost:4000/site/categories/#Words";
+        catUrl[i].href = encodeURIComponent(sParameter.trim());
+    };
+});
 </script>
 <script>
 const vid = document.getElementById("myVideo");
