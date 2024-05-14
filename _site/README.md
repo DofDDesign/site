@@ -13,6 +13,7 @@ git clone https://github.com/dofddesign/site.git
 Learn how to create and host your own Jekyll site [here](https://jekyllrb.com/docs/).
 
 ## <img src="https://www.dofddesign.com/static/resources/star.png" width="20px"> Donate
+
 Feel free to sponsor this project using the link below! :D
 
 <a href="https://github.com/sponsors/dofddesign" target="_blank">Sponsor</a>
