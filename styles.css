@@ -1492,6 +1492,8 @@ label {
   max-width: 100%;
   display:block;
   position: relative;
+  margin-left:auto;
+  margin-right:auto;
 }
 .post:hover {
   background-color: rgba(10,10,10,.50);
