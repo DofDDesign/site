@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     var referrer = document.referrer;
     var hash = window.location.hash;
     var category = hash.substring(1);
+    category = decodeURIComponent(category);
     var backlinks = document.getElementsByClassName('backlink');
     for (let i = 0; i < backlinks.length; i++) {
         backlinks[i].href = referrer;
