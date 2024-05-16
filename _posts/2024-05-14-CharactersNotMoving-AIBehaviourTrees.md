@@ -1,8 +1,8 @@
 ---
 layout: blog-post
-author: Joptimist
+author: Josh McGiff
 authorURL: https://github.com/JoshMcGiff
-title: Pawns, Characters Not Moving
+title: Characters Not Moving - AI Behaviour Trees
 excerpt: DefaultSceneRoot override issue - Unreal Engine 5 - After many painstaking hours of debugging, we discovered that DefaultSceneRoot can be the ROOT of all evil… **badum tss**
 date: 2024-05-14 22:55:07.301013 Etc/UTC
 pinned: false
